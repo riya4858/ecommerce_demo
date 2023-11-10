@@ -1,207 +1,163 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="">
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title> Orthoc </title>
+    <!-- Page Title -->
+    <title>Medino</title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'user/images/logo/favicon.png' %}" type="image/x-icon">
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'user/css/animate-3.7.0.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/font-awesome-4.7.0.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/bootstrap-4.1.3.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/owl-carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/jquery.datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/style.css' %}">
 </head>
-
-<body class="sub_page">
-
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Orthoc
-            </span>
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'index' %}">Home </a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'about' %}"> About <span class="sr-only">(current)</span> </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'departments' %}">Departments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'doctors' %}">Doctors</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-              </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-{% block content %}
-{% endblock %}
-
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
-              About
-            </h4>
-            <p>
-              Beatae provident nobis mollitia magnam voluptatum, unde dicta facilis minima veniam corporis laudantium alias tenetur eveniet illum reprehenderit fugit a delectus officiis blanditiis ea.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="" href="index.html">
-                Home
-              </a>
-              <a class="active" href="about.html">
-                About
-              </a>
-              <a class="" href="departments.html">
-                Departments
-              </a>
-              <a class="" href="doctors.html">
-                Doctors
-              </a>
-              <a class="" href="contact.html">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer_col ">
-          <h4>
-            Newsletter
-          </h4>
-          <form action="#">
-            <input type="email" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
-        </p>
-      </div>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
     </div>
-  </footer>
-  <!-- footer section -->
+    <!-- Preloader End -->
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    <!-- Header Area Starts -->
+    <header class="header-area">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 d-md-flex">
+                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> call us now! +1 305 708 2563</h6>
+                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span> medical@example.com</h6>
+                        <h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> Find our Location</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header" id="home">
+            <div class="container">
+                <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="index.html"><img src="{% static 'user/images/logo/logo.png' %}" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'departments' %}">Departments</a></li>
+                        <li><a href="{% url 'doctors' %}">Doctors</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>			          				          
+                    </ul>
+                </nav><!-- #nav-menu-container -->		    		
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    {% block content %}
+    {% endblock %}
+
+        <!-- Footer Area Starts -->
+    <footer class="footer-area section-padding">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="single-widget-home mb-5 mb-lg-0">
+                            <h3 class="mb-4">top products</h3>
+                            <ul>
+                                <li class="mb-2"><a href="#">managed website</a></li>
+                                <li class="mb-2"><a href="#">managed reputation</a></li>
+                                <li class="mb-2"><a href="#">power tools</a></li>
+                                <li><a href="#">marketing service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6">
+                        <div class="single-widget-home mb-5 mb-lg-0">
+                            <h3 class="mb-4">newsletter</h3>
+                            <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>  
+                            <form action="#">
+                                <input type="email" placeholder="Your email here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email here'" required>
+                                <button type="submit" class="template-btn">subscribe now</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 offset-xl-1 col-lg-3">
+                        <div class="single-widge-home">
+                            <h3 class="mb-4">instagram feed</h3>
+                            <div class="feed">
+                                <img src="assets/images/feed1.jpg" alt="feed">
+                                <img src="assets/images/feed2.jpg" alt="feed">
+                                <img src="assets/images/feed3.jpg" alt="feed">
+                                <img src="assets/images/feed4.jpg" alt="feed">
+                                <img src="assets/images/feed5.jpg" alt="feed">
+                                <img src="assets/images/feed6.jpg" alt="feed">
+                                <img src="assets/images/feed7.jpg" alt="feed">
+                                <img src="assets/images/feed8.jpg" alt="feed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <span>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</span>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="{% static 'user/js/vendor/jquery-2.2.4.min.js' %}"></script>
+	  <script src="{% static 'user/js/vendor/bootstrap-4.1.3.min.js' %}"></script>
+    <script src="{% static 'user/js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'user/js/vendor/owl-carousel.min.js' %}"></script>
+    <script src="{% static 'user/js/vendor/jquery.datetimepicker.full.min.js' %}"></script>
+    <script src="{% static 'user/js/vendor/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'user/js/vendor/superfish.min.js' %}"></script>
+    <script src="{% static 'user/js/main.js' %}"></script>
 
 </body>
-
 </html>

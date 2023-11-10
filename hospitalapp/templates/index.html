@@ -1,663 +1,381 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
+{% block content %}
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="">
-
-  <title> Orthoc </title>
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-
-</head>
-
-<body>
-
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <img src="{% static 'images/hero-bg.png' %}" alt="">
-    </div>
-
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Orthoc
-            </span>
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'departments' %}">Departments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'doctors' %}">Doctors</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-              </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      We Provide Best Healthcare
-                    </h1>
-                    <p>
-                      Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
+    <!-- Banner Area Starts -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4>Caring for better life</h4>
+                    <h1>Leading the way in medical excellence</h1>
+                    <p>Earth greater grass for good. Place for divide evening yielding them that. Creeping beginning over gathered brought.</p>
+                    <a href="" class="template-btn mt-3">take appointment</a>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      We Provide Best Healthcare
-                    </h1>
-                    <p>
-                      Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      We Provide Best Healthcare
-                    </h1>
-                    <p>
-                      Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-        </ol>
-      </div>
-
     </section>
-    <!-- end slider section -->
-  </div>
+    <!-- Banner Area End -->
 
-
-  <!-- department section -->
-
-  <section class="department_section layout_padding">
-    <div class="department_container">
-      <div class="container ">
-        <div class="heading_container heading_center">
-          <h2>
-            Our Departments
-          </h2>
-          <p>
-            Asperiores sunt consectetur impedit nulla molestiae delectus repellat laborum dolores doloremque accusantium
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="{% static 'images/s1.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Cardiology
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable page when looking at its layout.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="{% static 'images/s2.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Diagnosis
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable page when looking at its layout.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="{% static 'images/s3.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Surgery
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable page when looking at its layout.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="{% static 'images/s4.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  First Aid
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable page when looking at its layout.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btn-box">
-          <a href="">
-            View All
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end department section -->
-
-  <!-- about section -->
-
-  <section class="about_section layout_margin-bottom">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="{% static 'images/about-img.jpg' %}" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About <span>Us</span>
-              </h2>
-            </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <!-- doctor section -->
-
-  <section class="doctor_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Our Doctors
-        </h2>
-        <p class="col-md-10 mx-auto px-0">
-          Incilint sapiente illo quo praesentium officiis laudantium nostrum, ad adipisci cupiditate sit, quisquam aliquid. Officiis laudantium fuga ad voluptas aspernatur error fugiat quos facilis saepe quas fugit, beatae id quisquam.
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d1.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </div>
-              <h5>
-                Elina Josh
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d2.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </div>
-              <h5>
-                Adam View
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d3.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </div>
-              <h5>
-                Mia Mike
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          View All
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end doctor section -->
-
-  <!-- contact section -->
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container contact-form">
-            <form action="">
-              <div class="form-row">
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" placeholder="Your Name" />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end contact section -->
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center ">
-        <h2>
-          Testimonial
-        </h2>
-      </div>
-      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+    <!-- Feature Area Starts -->
+    <section class="feature-area section-padding">
+        <div class="container">
             <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="{% static 'images/client.jpg' %}" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Alan Emerson
-                      </h6>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding">
+                        <img src="{% static 'user/images/feature1.png' %}" alt="">
+                        <h3>advance technology</h3>
+                        <p class="pt-3">Creeping for female light years that lesser can't evening heaven isn't bearing tree appear</p>
                     </div>
-                    <p>
-                      Enim consequatur odio assumenda voluptas voluptatibus esse nobis officia. Magnam, aspernatur nostrum explicabo, distinctio laudantium delectus deserunt quia quidem magni corporis earum inventore totam consectetur corrupti! Corrupti, nihil sunt? Natus.
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
                 </div>
-              </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding mt-4 mt-md-0">
+                        <img src="{% static 'user/images/feature2.png' %}" alt="">
+                        <h3>comfortable place</h3>
+                        <p class="pt-3">Creeping for female light years that lesser can't evening heaven isn't bearing tree appear</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding mt-4 mt-lg-0">
+                        <img src="{% static 'user/images/feature3.png' %}" alt="">
+                        <h3>quality equipment</h3>
+                        <p class="pt-3">Creeping for female light years that lesser can't evening heaven isn't bearing tree appear</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding mt-4 mt-lg-0">
+                        <img src="{% static 'user/images/feature4.png' %}" alt="">
+                        <h3>friendly staff</h3>
+                        <p class="pt-3">Creeping for female light years that lesser can't evening heaven isn't bearing tree appear</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
+        </div>
+    </section>
+    <!-- Feature Area End -->
+
+    <!-- Welcome Area Starts -->
+    <section class="welcome-area section-padding3">
+        <div class="container">
             <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="{% static 'images/client.jpg' %}" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Alan Emerson
-                      </h6>
+                <div class="col-lg-5 align-self-center">
+                    <div class="welcome-img">
+                        <img src="{% static 'user/images/welcome.png' %}" alt="">
                     </div>
-                    <p>
-                      Enim consequatur odio assumenda voluptas voluptatibus esse nobis officia. Magnam, aspernatur nostrum explicabo, distinctio laudantium delectus deserunt quia quidem magni corporis earum inventore totam consectetur corrupti! Corrupti, nihil sunt? Natus.
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
                 </div>
-              </div>
+                <div class="col-lg-7">
+                    <div class="welcome-text mt-5 mt-lg-0">
+                        <h2>Welcome to our clinic</h2>
+                        <p class="pt-3">Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were.</p>
+                        <p>Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were the boring.</p>
+                        <a href="#" class="template-btn mt-3">learn more</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Department Area Starts -->
+    <section class="department-area section-padding4">
+        <div class="container">
             <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="{% static 'images/client.jpg' %}" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Alan Emerson
-                      </h6>
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Popular department</h2>
+                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
                     </div>
-                    <p>
-                      Enim consequatur odio assumenda voluptas voluptatibus esse nobis officia. Magnam, aspernatur nostrum explicabo, distinctio laudantium delectus deserunt quia quidem magni corporis earum inventore totam consectetur corrupti! Corrupti, nihil sunt? Natus.
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel_btn-container">
-          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
-            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end client section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-slider owl-carousel">
+                        <div class="single-slide">
+                            <div class="slide-img">
+                                <img src="{% static 'user/images/department1.jpg' %}" alt="" class="img-fluid">
+                                <div class="hover-state">
+                                    <a href="#"><i class="fa fa-stethoscope"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-department item-padding text-center">
+                                <h3>cardiac clinic</h3>
+                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
+                            </div>
+                        </div>
+                        <div class="single-slide">
+                            <div class="slide-img">
+                                <img src="{% static 'user/images/department2.jpg' %}" alt="" class="img-fluid">
+                                <div class="hover-state">
+                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-department item-padding text-center">
+                                <h3>plastic surgery</h3>
+                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
+                            </div>
+                        </div>
+                        <div class="single-slide">
+                            <div class="slide-img">
+                                <img src="{% static 'user/images/department3.jpg' %}" alt="" class="img-fluid">
+                                <div class="hover-state">
+                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-department item-padding text-center">
+                                <h3>dental clinic</h3>
+                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
+                            </div>
+                        </div>
+                        <div class="single-slide">
+                            <div class="slide-img">
+                                <img src="{% static 'user/images/department1.jpg' %}" alt="" class="img-fluid">
+                                <div class="hover-state">
+                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-department item-padding text-center">
+                                <h3>cardiac clinic</h3>
+                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
         </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
-              About
-            </h4>
-            <p>
-              Beatae provident nobis mollitia magnam voluptatum, unde dicta facilis minima veniam corporis laudantium alias tenetur eveniet illum reprehenderit fugit a delectus officiis blanditiis ea.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="active" href="index">
-                Home
-              </a>
-              <a class="" href="about">
-                About
-              </a>
-              <a class="" href="departments">
-                Departments
-              </a>
-              <a class="" href="doctors">
-                Doctors
-              </a>
-              <a class="" href="contact">
-                Contact Us
-              </a>
+    </section>
+    <!-- Department Area Starts -->
+
+    <!-- Patient Area Starts -->
+    <section class="patient-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Patient are saying</h2>
+                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="single-patient mb-4">
+                        <img src="{% static 'user/images/patient1.png' %}" alt="">
+                        <h3>daren jhonson</h3>
+                        <h5>hp specialist</h5>
+                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
+                    </div>
+                    <div class="single-patient">
+                        <img src="{% static 'user/images/patient2.png' %}" alt="">
+                        <h3>black heiden</h3>
+                        <h5>hp specialist</h5>
+                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 align-self-center">
+                    <div class="appointment-form text-center mt-5 mt-lg-0">
+                        <h3 class="mb-5">appointment now</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email'" required> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="datepicker" placeholder="Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date'" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" cols="20" rows="7"  placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+                            </div>
+                            <a href="#" class="template-btn">appointment now</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3 footer_col ">
-          <h4>
-            Newsletter
-          </h4>
-          <form action="#">
-            <input type="email" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
+    </section>
+    <!-- Patient Area Starts -->
+
+    <!-- Specialist Area Starts -->
+    <section class="specialist-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Our specialish</h2>
+                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-doctor mb-4 mb-lg-0">
+                        <div class="doctor-img">
+                            <img src="{% static 'user/images/doctor1.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="content-area">
+                            <div class="doctor-name text-center">
+                                <h3>ethel davis</h3>
+                                <h6>sr. faculty data science</h6>
+                            </div>
+                            <div class="doctor-text text-center">
+                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+                                <ul class="doctor-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-doctor mb-4 mb-lg-0">
+                        <div class="doctor-img">
+                            <img src="{% static 'user/images/doctor2.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="content-area">
+                            <div class="doctor-name text-center">
+                                <h3>dand mories</h3>
+                                <h6>sr. faculty plastic surgery</h6>
+                            </div>
+                            <div class="doctor-text text-center">
+                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+                                <ul class="doctor-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-doctor mb-4 mb-sm-0">
+                        <div class="doctor-img">
+                            <img src="{% static 'user/images/doctor3.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="content-area">
+                            <div class="doctor-name text-center">
+                                <h3>align board</h3>
+                                <h6>sr. faculty data science</h6>
+                            </div>
+                            <div class="doctor-text text-center">
+                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+                                <ul class="doctor-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-doctor">
+                        <div class="doctor-img">
+                            <img src="{% static 'user/images/doctor4.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="content-area">
+                            <div class="doctor-name text-center">
+                                <h3>jeson limit</h3>
+                                <h6>sr. faculty plastic surgery</h6>
+                            </div>
+                            <div class="doctor-text text-center">
+                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+                                <ul class="doctor-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
-        </p>
-      </div>
-    </div>
-  </footer>
-  <!-- footer section -->
+    </section>
+    <!-- Specialist Area Starts -->
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    <!-- Hotline Area Starts -->
+    <section class="hotline-area text-center section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Emergency hotline</h2>
+                    <span>(+01) – 256 567 550</span>
+                    <p class="pt-3">We provide 24/7 customer support. Please feel free to contact us <br>for emergency case.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hotline Area End -->
 
-</body>
+    <!-- News Area Starts -->
+    <section class="news-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Recent medical news</h2>
+                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-news">
+                        <div class="news-img">
+                            <img src="{% static 'user/images/news1.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="news-text">
+                            <div class="news-date">
+                                22 July 2018
+                            </div>
+                            <h3><a href="blog-details.html">chip to model coeliac disease</a></h3>
+                            <p>Elementum libero hac leo integer. Risus hac part duriw feugiat litora cursus hendrerit bibendum per person on elit.Tempus inceptos posuere me.</p>
+                            <a href="blog-details.html" class="news-btn">read more <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-news mt-5 mt-md-0">
+                        <div class="news-img">
+                            <img src="{% static 'user/images/news2.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="news-text">
+                            <div class="news-date">
+                                22 Oct 2018
+                            </div>
+                            <h3><a href="blog-details.html">Galectins An Ancient FaSi Future</a></h3>
+                            <p>Elementum libero hac leo integer. Risus hac part duriw feugiat litora cursus hendrerit bibendum per person on elit.Tempus inceptos posuere me.</p>
+                            <a href="blog-details.html" class="news-btn">read more <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-news mt-5 mt-lg-0">
+                        <div class="news-img">
+                            <img src="{% static 'user/images/news3.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="news-text">
+                            <div class="news-date">
+                                22 Sep 2018
+                            </div>
+                            <h3><a href="blog-details.html">Getting the Most Out of the CLARI</a></h3>
+                            <p>Elementum libero hac leo integer. Risus hac part duriw feugiat litora cursus hendrerit bibendum per person on elit.Tempus inceptos posuere me.</p>
+                            <a href="blog-details.html" class="news-btn">read more <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News Area Starts -->
+    
 
-</html>
+{% endblock %}

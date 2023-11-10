@@ -4,57 +4,190 @@
 <div class="content-body">
     <!-- row -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
+        
+
+    <div class="row">
+            <div class="col-md-12">
                 <div class="card">
-                    <div class="stat-widget-two card-body">
-                        <div class="stat-content">
-                            <a href="{% url 'patient_records' %}">
-                            <div class="stat-text">Patient Records</div>
-                            </a>
-                        </div>
-                        
+                    <div class="card-header">
+                        <h4 class="card-title">Manage Patients</h4>
                     </div>
+                    <div class="card-body">
+                        <!-- Nav tabs -->
+                        <div class="default-tab">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home"><span class="fa fa-bars"></span> Patient list</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile"><span class="fa fa-plus"></span> Admit Patient</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#approve"><span class="fa fa-bars"></span> Approve Patient</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#spcl"><span class="fa fa-plus"></span> Discharge Patient</a>
+                                </li>
+                            </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel">
+                                <div class="pt-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered verticle-middle table-responsive-sm">
+                                            <thead class="thead-dark">
+                                                <tr style="color:black">
+                                                    <th>Name</th>
+                                                    <th>Image</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Gender</th>
+                                                    <th>Symptoms</th>
+                                                    <th>Mobile</th>
+                                                    <th>Address</th>
+                                                    
+                                                    <th style="text-align:center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for i in pat %}
+                                                <tr>
+                                                    <td>{{i.name}}</td>
+                                                    <td><img src="{{i.image.url}}" width="50"></td>
+                                                    <td>{{i.dob}}</td>
+                                                    <td>{{i.gender}}</td>
+                                                    <td>{{i.symptoms}}</td>
+                                                    <td>{{i.mobile}}</td>
+                                                    <td>{{i.address}}</td>
+                                                    <td style="text-align:center">
+                                                    <span>
+                                                        <a href="{% url 'edit_patient' i.id %}" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" ><i
+                                                                class="fa fa-pencil color-muted"></i> </a>
+                                                        <a href="{% url 'delete_patient' i.id %}" data-toggle="tooltip"
+                                                            data-placement="top" ><i
+                                                                class="fa fa-close color-danger"></i></a>
+                                                    </span></td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <div class="pt-4">
+                                    <form action="{% url 'addpatient' %}" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Name</label>
+                                                <input type="text" name="name" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Username</label>
+                                                <input type="text" name="username" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Gender</label>
+                                                <input type="radio" id="male" name="gender" value="male">
+                                                <label for="male">Male</label>
+
+                                                <input type="radio" id="female" name="gender" value="female">
+                                                <label for="female">Female</label>
+
+                                                <input type="radio" id="other" name="gender" value="other">
+                                                <label for="other">Other</label>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Date of Birth</label>
+                                                <input type="date" name="dob" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Image</label>
+                                                <input type="file" name="image" accept="image/*" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Symptoms</label>
+                                                <input type="text" name="symptoms" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Mobile</label>
+                                                <input type="text" name="mobile" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label style="color:black">Address</label>
+                                                <textarea name="address" class="form-control" ></textarea>
+                                            </div>
+                                                                                       
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Add Patient</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane fade" id="approve">
+                                <div class="pt-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered verticle-middle table-responsive-sm">
+                                            <thead class="thead-dark">
+                                                <tr style="color:black">
+                                                    <th>Name</th>
+                                                    <th>Image</th>
+                                                    <th>Mobile</th>
+                                                    <th>Address</th>
+                                                    <th>Department</th>
+                                                    <th style="text-align:center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Lew Shawon</td>
+                                                    <td><span>image</span></td>
+                                                    <td><span>Dell-985</span></td>
+                                                    <td><span>456 pcs</span></td>
+                                                    <td><span>Department</span></td>
+                                                    <td style="text-align:center">
+                                                    <span>
+                                                        <a href="javascript:void()" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" ><i
+                                                                class="fa fa-check color-s">Approve</i> </a>
+                                                        <a href="javascript:void()" data-toggle="tooltip"
+                                                            data-placement="top" ><i
+                                                                class="fa fa-close color-danger">Reject</i></a>
+                                                    </span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="spcl">
+                                <div class="pt-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered verticle-middle table-responsive-sm">
+                                            <thead class="thead-dark">
+                                                <tr style="color:black">
+                                                    <th>Department</th>
+                                                    <th>Doctor name</th>
+                                                    <th>Mobile</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Lew Shawon</td>
+                                                    <td><span>image</span></td>
+                                                    <td><span>Dell-985</span></td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="stat-widget-two card-body">
-                        <div class="stat-content">
-                            <a href="{% url 'admit_patient' %}">
-                            <div class="stat-text">Admit Patient</div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="stat-widget-two card-body">
-                        <div class="stat-content">
-                        <a href="{% url 'approve_doctor' %}">
-                            <div class="stat-text">Approve Patient</div>
-                        </a>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="stat-widget-two card-body">
-                        <div class="stat-content">
-                        <a href="{% url 'doctor_specialization' %}">
-                            <div class="stat-text">Discharge Patient</div>
-                        </a>
-                        </div>
-                       
-                    </div>
-                </div>
-                <!-- /# card -->
-            </div>
-            <!-- /# column -->
         </div>
     </div>
 </div>
